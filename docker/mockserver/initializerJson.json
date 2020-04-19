@@ -1,0 +1,28 @@
+[
+  {
+    "httpRequest": {
+      "method": "PUT",
+      "path": "/api/v2/tickets/34677"
+    },
+    "httpResponse": {
+      "body": {
+        "type" : "STRING",
+        "string": "{\"cc_emails\": [], \"fwd_emails\": [], \"reply_cc_emails\": [], \"ticket_cc_emails\": [], \"spam\": false, \"email_config_id\": null, \"fr_escalated\": false, \"group_id\": null, \"priority\": 1, \"requester_id\": 11031144128, \"responder_id\": 11005437387, \"source\": 3, \"status\": 9, \"subject\": \"Test\", \"company_id\": null, \"custom_fields\": {\"project_manager\": \"Not Applicable\", \"account_manager\": null, \"cf_registration\": null, \"cf_mass_registration\": null, \"cf_expired_code\": null, \"name_first_last\": \"Utasi Tamás\", \"cf_needs_action_by\": \"PKB\", \"phone_number\": null, \"logged_by\": \"PKB\", \"department\": \"Not applicable\", \"support_code_displayed_at_the_bottom_of_the_page_on_the_webpage_with_an_issue\": null}, \"description\": \"<div style=\\\"font-family:Helvetica Neue, Helvetica, Arial, sans-serif; font-size:13px\\\"><div dir=\\\"ltr\\\">I want to test FD API</div></div>\", \"description_text\": \"I want to test FD API\", \"id\": 34677, \"type\": \"Password reset\", \"to_emails\": null, \"product_id\": null, \"attachments\": [], \"is_escalated\": false, \"tags\": [], \"created_at\": \"2020-04-10T04:13:46Z\", \"updated_at\": \"2020-04-17T20:09:14Z\", \"due_by\": \"2020-04-28T12:55:00Z\", \"fr_due_by\": \"2020-04-10T16:30:00Z\"}",
+        "contentType" : "application/json; charset=utf-8"
+      }
+    }
+  },
+  {
+    "httpRequest": {
+      "method": "POST",
+      "path": "/api/v2/tickets/34677/reply"
+    },
+    "httpResponse": {
+      "body": {
+        "type" : "STRING",
+        "string": "{\"id\":11113592153,\"user_id\":11005437387,\"from_email\":\"\\\"Patients Know Best Support\\\" <help@patientsknowbest.com>\",\"cc_emails\":[],\"bcc_emails\":[],\"body\":\"<div>Hi John, Steve and Miklós</div>\",\"body_text\":\"Hi John, Steve and Miklós\",\"ticket_id\":34677,\"to_emails\":[\"tamas.utasi@gmail.com\"],\"attachments\":[],\"source_additional_info\":null,\"created_at\":\"2020-04-17T20:11:28Z\",\"updated_at\":\"2020-04-17T20:11:28Z\"}",
+        "contentType" : "application/json; charset=utf-8"
+      }
+    }
+  }
+]

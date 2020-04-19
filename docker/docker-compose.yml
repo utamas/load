@@ -1,0 +1,14 @@
+version: "3.7"
+services:
+  fd_mock:
+    image: mockserver/mockserver:mockserver-5.10.0
+    ports:
+      - 9999:8080
+    environment:
+      LOG_LEVEL: "ERROR"
+      SERVER_PORT: 8080
+      MOCKSERVER_INITIALIZATION_JSON_PATH: /config/initializerJson.json
+    volumes:
+      - type: bind
+        source: ./mockserver
+        target: /config
