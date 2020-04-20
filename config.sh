@@ -14,9 +14,10 @@ MOCK_TICKET_REQUEST=ticket/status.json
 MOCK_REPLY_PATH=/api/v2/tickets/34677/reply
 MOCK_REPLY_REQUEST=reply/fd-reply.json
 
-SERVICE_BASE_URL=http://localhost:8080
+SERVICE_BASE_URL=http://localhost:3000
 # Ticket
-SERVICE_TICKET_PATH=/api/status/34677/waiting_on_developer
+SERVICE_TICKET_PATH=/FreshDesk/34677/status
+SERVICE_TICKET_REQUEST=ticket/status-int.json
 # Reply
-SERVICE_REPLY_PATH=/api/message/34677
+SERVICE_REPLY_PATH=/FreshDesk/34677/message
 SERVICE_REPLY_REQUEST=reply/fd-int-reply.json
