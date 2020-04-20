@@ -28,14 +28,18 @@ for i in `seq ${WARMUP_ROUNDS}`; do
   echo "Ticket/Service - Warmup round #${i}"
   ab -k -c 10 \
      -n 1000 \
-     -m put -T application/json \
+     -u ${SERVICE_TICKET_REQUEST} -m POST -T application/json \
+    -H "Authorization: Basic dGFtYXM6dGFtYXM=" \
+    -H "Accept: application/json" \
      ${SERVICE_BASE_URL}${SERVICE_TICKET_PATH}
 done
 echo "Ticket/service - measure"
 for i in `seq ${MEASUREMENT_ROUNDS}`; do
   ab -k -c ${PARALLEL_USER_COUNT} \
         -n ${NUMBER_OF_REQUEST_IN_TOTAL} \
-        -m put -T application/json \
+        -u ${SERVICE_TICKET_REQUEST} -m POST -T application/json \
+        -H "Authorization: Basic dGFtYXM6dGFtYXM=" \
+        -H "Accept: application/json" \
         -e ticket/measurements/service_baseline-${i}.csv \
         ${SERVICE_BASE_URL}${SERVICE_TICKET_PATH} > ticket/measurements/service_baseline-${i}
 done
