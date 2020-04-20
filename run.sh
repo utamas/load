@@ -8,6 +8,8 @@ set -eup pipefail
 
 source ./config.sh
 
+rm -rf ticket/measurements/mock_baseline-* || true
+rm -rf ticket/measurements/service_baseline-* || true
 for i in `seq ${WARMUP_ROUNDS}`; do
   echo "Ticket/Mock - Warmup round #${i}"
   ab -k -c 10 \
