@@ -14,7 +14,7 @@ MOCK_TICKET_REQUEST=ticket/status.json
 MOCK_REPLY_PATH=/api/v2/tickets/34677/reply
 MOCK_REPLY_REQUEST=reply/fd-reply.json
 
-SERVICE_BASE_URL=http://localhost:8080
+SERVICE_BASE_URL=http://localhost:8082
 # Ticket
 SERVICE_TICKET_PATH=/api/status/34677/waiting_on_developer
 # Reply
